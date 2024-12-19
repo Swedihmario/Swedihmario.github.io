@@ -1,0 +1,121 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>What Comes Next</title>
+<link rel="stylesheet" href="whatcomesnext.css">
+</head>
+
+<body>
+<div class="WCN-Img"></div>
+<a href="../portfolio.html">
+<div class="backbutton">Go back</div>
+</a>
+<div class="InfoBox1">
+<div class="divider" id="textdiv">
+    <h1>
+    Info about the game
+    </h1>
+    <p>
+    'What Comes Next' is a game developed by me and a few other game dev students. The purpose of making this game is to simulate working like a real indie game studio trying to make a game from the ground up. Because of this, We take this very seriously. We do everyting ourselves, and we plan to sell the game on Steam once it's ready. <a href="https://store.steampowered.com/app/3167320/What_Comes_Next/" target="_blank">Here</a> is the link to the Steam page. 
+    </p>
+    &nbsp;
+    <p>
+    The game is about a girl in the 1970's France that escapes from her orphanage to try to find her real parents. Accompaning her, she has her pet rat. The player is able to switch to the rat in certain places to help solve puzzles. What makes the gameplay interesting and engaging is the synergy between the girl and the rat, and the cooperation they have to do in order to progress.
+    </p>
+    &nbsp;
+    <p>
+    We have already seen some success. We got the chance to show off our game at Dreamhack in Älvsjö 2024 and we got a lot of people to try our demo and give us valuable feedback. 
+    </p> 
+</div>
+<div class="divider">
+    <div class="pic"></div>
+</div>
+</div>
+
+<h1 id="breaker"> Some of My Contributions </h1>
+
+<div class="InfoBox1" id="big">
+    
+    <div class="divider">
+        <div class="pic" id="pic2"></div>
+        <div class="pic" id="pic3"></div>
+        <div class="pic" id="pic4"></div>
+        <div class="pic" id="pic5"></div>
+    </div>
+
+    <div class="divider" id="textdiv">
+        <h1>
+        Alert Icon
+        </h1>
+        <p>
+        When the player gets inside the vision cone of an enemy, or starts making noise close to the enemy, an alert meter starts to fill above the enemy's head. Once fully filled, the icon switches to an exclamation mark to show that the enemy has spotted the player character, and they start to chase after her.
+        The speed at which the alert meter fills depends on the player's proximity to the enemy.
+        </p>
+        &nbsp;
+        <div class="questionmark"></div>
+        <p id="spacy">
+        To implement this system, I first created an enumeration of the different alert speed types: <b>NegativeSlow</b>, <b>Slow</b>, <b>Medium</b>, <b>Fast</b> and <b>Extreme</b>. After this, the enums were mapped to float values in a dictionary. These values were made so that they are customizable in each enemy.
+        This code is in the script of the icon itself. When an enemy detects the player, a new instance of the alert icon is instantiated and parented to the enemy. The icon is destroyed when the alert meter resets to zero.
+        The icon was also coded to always face the player. This was done by using transform.Lookat(playerCamera).
+        </p>
+        &nbsp;
+        <div class="exclamationmark"></div>
+        <p id="spacy">
+        The second code snippet shows how the levels of alert-speed changes. The class the code is from is the EnemySearch state. Once the enemy has spotted the player, a float checks how far the player is from the enemy using Unity's Vector3.Distance. Once the distance has been determined,
+        a switch case switches how fast the alert icon tics up depening on this distance that was calculated. The switch case uses intervals, so that a case is between two distances. The actual intervals are made so that they are not set values, rather interchangeable in each enemy object.
+        </p> 
+</div>    </div>
+
+<div class="InfoBox1" id="big">
+    <div class="divider" id="textdiv">
+        <h1>
+        Puzzle design
+        </h1>
+        <p>
+        Here is a puzzle I have been designing together with Lukas Svens for level 2 of the game where the player arrives in the city.
+        </p>
+        &nbsp;
+        <p>
+        The objective of the puzzle is to collect a shirt for a homeless person in order to get help from him. The shirt is on a washing line above high up between two houses in an alley, and the player has to find a way to it.
+        If that wasn't enough of a challenge, a dog is patrolling along the alley. The dog is hostile towards both the player and the rat.    
+        </p>
+        &nbsp;
+        <p>
+        Along the alley, the player can spot a door with a cat flap. The door is closed, so the girl cannot enter. However, the cat flap is the perfect size for the rat.
+        If the rat waits in the hiding spot, and then sneak past the dog when it is patrolling deeper into the alley, the rat gets a chance to enter the house through the cat flap.
+        </p> 
+        &nbsp;
+        <p>
+        Upon entering the house, the rat finds itself directly in front of the house's cat. This is where a scripted event happens. The camera shows the rat jumping out
+        of the house with the cat neck and neck behind it. However, the dog patrolling the street spots the cat, and the cat forgets about the rat and quickly runs deeper
+        into the alley to get away from the dog, and the dog follows. Thus, clearing the alley of the dog problem.
+        </output>
+        </p>
+        &nbsp;
+        <p>
+        With the dog and cat gone, the rat can yet again enter the house through the cat flap and grab the key on the table inside, and then return to the girl so that she can
+        unlock the door and enter the house herself. She then makes her way up the stairs and unlocks the window.
+        </p>
+        <p>
+        When the window is unlocked, the rat can balance on the washing line to get to the shirt hanging there. The rat drops the shirt on the ground, and the girl goes to pick it up.
+        </p>
+        &nbsp;
+        <p>
+        This puzzle is meant to show the synergy and collaboration the rat and the girl need in order to progress. Without each other, they could not achieve retrieving the shirt.
+        The puzzle plays on assumptions that the player might have, for example, a house with a cat flap equals cat lives there, and the dynamics between cats and dogs. This hopefully makes the puzzle intuitive and 
+        makes the steps of the puzzle feel purposefull.
+        </p>
+        <div class="goal"></div>
+    </div>
+    <div class="divider">
+        <div class="pic" id="pic6"></div>
+        <div class="pic" id="pic7"></div>
+        <div class="pic" id="pic8"></div>
+        <a id="credit">Sketch made by Lukas Svens</a>
+    </div>
+    </div>
+
+</body>
+
+
+</html>

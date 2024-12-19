@@ -1,0 +1,128 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>Iter Mortis</title>
+<link rel="stylesheet" href="itermortis.css">
+</head>
+
+<body>
+<div class="Itermortis-Img"></div>
+<a href="../portfolio.html">
+<div class="backbutton">Go back</div>
+</a>
+<div class="bird"></div>
+<div class="bird2"></div>
+<div class="InfoBox1">
+<div class="divider" id="textdiv">
+    <h1>
+    Info about the game
+    </h1>
+    <p>
+    'Iter Mortis' is a game developed by me and a few other students for a school course we had during march trough may of 2024.  <a href="https://dead-devs-developing.itch.io/iter-mortis" target="_blank">Here</a> is the link to the Itch.io page. 
+    </p>
+    &nbsp;
+    <p>
+    The game is about a man that has died and goes through a journey through the "Underworld" to come to terms about his death. 'Iter Mortis' means the journey of death in latin. The game is about accepting one's own mortality. There are five stages in the level, each representing the five stages of grief. The game is very narrative and atmosphere driven. Through these levels, the player has to talk to figures and do puzzles to advance.
+    </p>
+    &nbsp;
+    <p>
+    This project was our first real big game development we got to do. I learned a lot working on this game. Particulary how to work as a team and the challenges that comes with that.
+    </p> 
+</div>
+<div class="divider">
+    <div class="pic"></div>
+</div>
+</div>
+
+<h1 id="breaker"> Some of My Contributions </h1>
+
+<div class="InfoBox1" id="big">
+    
+    <div class="divider">
+        <div class="pic" id="pic2"></div>
+        <div class="pic" id="pic3"></div>
+        <div class="pic" id="pic4"></div>
+        <div class="pic" id="pic5"></div>
+    </div>
+
+    <div class="divider" id="textdiv">
+        <h1>
+        Dialogue System
+        </h1>
+        <p>
+        As previously mentioned, the game is very narrative driven, so a mechanic we decided to implement was that npc's could talk to the player character.
+        I was the one that created this system. The system supports <b>audio</b>, as in voice clips play when the npc talks, <b>subtitles</b> (that can be turned on and off by the way), <b>animation</b>
+        animation clips can be linked to dialogue entries to have the npc do a specific animation when they say something, and <b>pause time</b>, which dictates how long the pauses are between dialogue entries.
+        </p>
+        &nbsp;
+        <div class="questionmark"></div>
+        <p id="spacy">
+        The second picture shows how the system was interacted with in the scene view. There is a list of elements. Each element is a dialogue entry. Something that I wished I had done differently with this is to make
+        the system a Scriptable-Object. That way, the dialogue data is not tied to a specific scene and can be modified without working directly in a scene. I did not know about Scriptable-Objects at the time.
+        </p>
+        &nbsp;
+        <div class="exclamationmark"></div>
+        <p id="spacy">
+        I made a class called "DialogueContent" that had all the different references the dialogue needed. After that, I made a list that uses this class, and made it serializable; that way, it showed up in the inspector in Unity.
+        </p> 
+        <p id="spacy">
+            The code works a little bit like this: The code checks if any audio sources is currently playing, or if the dialogue is paused. If none of this is true, it means that a new dialogue is meant to be played, and the code initializes the next dialogue entry.
+            The code updates it listeners (if it has any) in case an unique "event" is supposed to take place at that dialogue entry. The code also checks thing like if the subtitles option is enabled in the settings.
+            </p> 
+            <p id="spacy">
+                Overall, in retrospect I see some things that could've been cleaner and better with the code, I'm still proud of how it works and how well it works in the game.
+                </p> 
+</div>    </div>
+
+<div class="InfoBox1" id="big">
+    <div class="divider" id="textdiv">
+        <h1>
+        Puzzle design
+        </h1>
+        <p id="spacy">
+        This is a puzzle I designed together with some other people in level four. I was the lead designer of this project.
+        </p>
+        &nbsp;
+        <p id="spacy">
+            Each level in the game has a unique theme. Level four's theme is depression. The game is very narrative driven, 
+            so when coming up with a puzzle for this level, it must reinforce the overall narrative and feeling we want the player to experience. 
+            I used narrative storytelling as a guide to design this puzzle. The puzzle that I and others came up with is sort of a treasure hunt.
+            The level takes place in a moody and liminal park. 
+            The player is to find a polaroid picture in the park that portrays another place in the park where the next picture is. 
+        </p>
+        &nbsp;
+        <p id="spacy">
+            As previously mentioned, when designing this puzzle, it was important that it made the player feel a certain emotion; depression. 
+            This is why the decision was made to make the pictures show a happier version of the park.
+            Our hope with this puzzle was that the contrast of the current experience of the player put against the bright and happy pictures would make the player feel melancholic, and that the player would start to think about the narrative by finding and interacting with these pictures. 
+        </p> 
+        &nbsp;
+        <p id="spacy">
+            The decision to have just polaroid pictures was not accidental either. This was motivated by the concept of evocative spaces, which means to build upon previous knowledge of the player to evoke a certain feeling. 
+            We think polaroid pictures remind people of their past, because at least we felt that they are nostalgic in a way.    
+        </output>
+        </p>
+        &nbsp;
+        <p id="spacy">
+            Some changes that we designers made to the original plan was to make the ‘treasure hunt’ more engaging by making the player have to do some small thing to find the polaroid. For example, having to throw a rock onto a big tree to make the picture fall down from its top, or having to find the picture hidden in a trashcan. These small changes were simply done to make the gameplay a bit more interesting.
+        </p>
+        <p>
+            
+        </p>
+        &nbsp;
+        <p>
+
+        </p>
+        <div class="goal"></div>
+    </div>
+    <div class="divider">
+        <div class="pic" id="pic6"></div>
+        <div class="pic" id="pic7"></div>
+        <div class="pic" id="pic8"></div>
+    </div>
+    </div>
+
+</body>
+
+
+</html>
